@@ -1,0 +1,88 @@
+mixin footer(state)
+  if state == 'index'
+    +b.footer-callback
+      +e.left
+        +e.P.title контакты
+        +e.cnt
+          +e.cnt-icon
+            +e.IMG.cnt-i(src='/icon/icon-cnt-1.svg' alt='')
+          +e.cnt-content
+            +e.cnt-title Офис продаж
+            +e.P.cnt-val г.Н.Новгород, ул. М. Горького, 117,  БЦ «Столица Нижний», 3 этаж, офис 317
+        +e.cnt
+          +e.cnt-icon
+            +e.IMG.cnt-i(src='/icon/icon-cnt-2.svg' alt='')
+          +e.cnt-content
+            +e.cnt-title почта
+            +e.A.cnt-val(href="mailto:stn@stn52") stn@stn52
+        +e.cnt
+          +e.cnt-icon
+            +e.IMG.cnt-i(src='/icon/icon-cnt-3.svg' alt='')
+          +e.cnt-content
+            +e.cnt-title Часы работы
+            +e.cnt-val
+              p В зимнее время: 
+                span пн-пт 9:00-19:00
+              p В летнее время: 
+                span пн-чт 9:00-19:00, пт 9:00-18:00
+        +b.social
+          +e.P.title Мы в социальных сетях
+          +e.list
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/icon/icon-social-1.svg' alt='')
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/icon/icon-social-2.svg' alt='')
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/icon/icon-social-3.svg' alt='')
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/icon/icon-social-4.svg' alt='')
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/icon/icon-social-5.svg' alt='')
+      +e.right
+        +b.callback-bottom
+          +e.left
+            +e.P.title По всем вопросам
+            +e.A.phone(href='tel:8 (800) 000-00-00') 8 (800) 000-00-00
+            +e.P.time Звонки принимаются пн-пт 9:00-19:00, сб-вск 10:00-18:30
+          +e.right
+            +e.FORM.form
+              +e.group
+                +b.group
+                  +e.SPAN.name Имя
+                  +e.INPUT.field.required(type="text")
+              +e.group
+                +b.group
+                  +e.SPAN.name Телефон
+                  +e.INPUT.field.required(type="tel")
+              +e.BUTTON.submit Оставить заявку
+            +e.sign Нажимая «Подписаться» Вы соглашаетесь с условиями 
+              a(href="#")  обработки персональных данных
+        +e.map
+          +e.IMG.pic#map-footer(src='/images/stub-map-2.jpg' alt='')
+    +b.text-bottom Девелопер - «Столица Нижний». Застройщик - ООО СЗ "Регионинвест" Проектная декларация на сайте наш.дом.рф. Официальный сайт. Не является публичной офертой. Представленные материалы и оборудование демонстрируется в целях художественной визуализации, являются примером. Марка или производитель оборудования и материалов могут меняться без ухудшения свойств без какого-либо уведомления. Цветовые решения фасадов, и иные проектные решения могут быть изменен
+  if state == 'sale'
+    +b.footer-sale
+      +e.inner.inner
+        +e.action
+          +e.P.title Подпишись на e-maill рассылку
+          +e.P.subtitle Вы будете узнавать об акциях первыми
+          +e.FORM.form
+            +e.row
+              +e.group
+                +b.group
+                  +e.SPAN.name Имя
+                  +e.INPUT.field.required(type="text")
+              +e.group
+                +b.group
+                  +e.SPAN.name E-mail
+                  +e.INPUT.field.required(type="text")
+            +e.BUTTON.submit.btn_brown Подписаться
+            +e.sign Нажимая «Подписаться» Вы соглашаетесь с условиями 
+              a(href="#")  обработки персональных данных
+        +e.P.text Ввод в эксплуатацию  /
+          span 2025
+      +e.IMG.pic(src='/images/footer-sale.png' alt='')
+  +b.FOOTER.footer
+    +e.inner.inner
+      +e.P.copy © «Столица Нижний», 2022. Все права защищены
+      +e.A.link(href="#") Политика конфиденциальности

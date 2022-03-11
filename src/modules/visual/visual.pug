@@ -1,0 +1,42 @@
+mixin visual(vars)
+  +b.visual
+    +e.box
+      +e.IMG.pic(src='/images/visual-1.jpg' alt='')
+    +e.head
+      +e.inner.inner
+        +e.P.title Визуальный выбор
+        +e.BUTTON.btn
+          +e.IMG.i(src='/icon/setting-1.svg' alt='')
+          | Выбрать  по параметрам
+    +b.select-box
+      +e.head Секция 1
+      +e.P.sign Свободные планировки без отделки
+      +e.list
+        +e.item
+          +e.P.name Срок ввода
+          +e.P.val 4 квартал 2022
+        +e.item
+          +e.P.name Кол-во квартир
+          +e.P.val 450 кв.
+      +e.success
+        +e.P.success-text Готов на 25%
+        +e.line
+          span(style="width: 25%")
+      +e.row
+        +e.info
+          +e.round
+            +e.P.round-text 1к
+          +e.P.txt 10 кв.
+        +e.P.price от 7 млн.
+      +e.row
+        +e.info
+          +e.round
+            +e.P.round-text 2к
+          +e.P.txt 8 кв.
+        +e.P.price от 15 млн.
+      +e.row
+        +e.info
+          +e.round
+            +e.P.round-text 3к
+          +e.P.txt 10 кв.
+        +e.P.price от 20 млн.

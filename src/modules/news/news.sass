@@ -1,0 +1,108 @@
+.news
+  padding: 10rem 0 7rem
+  position: relative
+  overflow: hidden
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__control
+    display: flex
+    align-items: center
+  &__more
+    margin-right: 3rem
+    +fs(16px)
+    font-weight: 500
+    line-height: 1
+    text-decoration-line: underline
+    color: #003062
+  &__pagination
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 250px
+  &__slider
+    overflow: inherit
+    margin-top: 4rem
+  &__btn
+    width: 53px
+    height: 53px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid #003062
+    border-radius: 100%
+    margin-left: 1.2rem
+    transition: .5s linear
+    flex-shrink: 0
+    cursor: pointer
+    &_next
+      margin-left: 2rem
+    svg
+      width: 12px
+    path
+      stroke: #003062
+      transition: .5s linear
+    &:hover
+      transform: scale(1.1)
+      background: #004083
+      border-color: #004083
+      path
+        stroke: #fff
+    &:active
+      background: #002953
+      border-color: #002953
+      path
+        stroke: #fff
+  &__slide
+    max-width: 395px
+    box-sizing: border-box
+    padding: 1rem
+    transition: .5s ease
+    background: #fff
+    border-radius: 3px
+    &:hover
+      box-shadow: 0px -3px 19px rgba(0, 24, 107, 0.09), 0px 19px 46px rgba(7, 0, 22, 0.07)
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 3px
+    height: 283px
+    object-fit: cover
+  &__content
+    margin-top: 1.5rem
+  &__date
+    +fs(18px)
+    font-family: $ff2
+    line-height: 1
+    color: rgba(#23262B, .6)
+    font-style: italic
+  &__caption
+    +fs(20px)
+    font-weight: 600
+    line-height: 1.2
+    margin: 1rem 0 1.5rem
+  &__text
+    line-height: 1.4
+    width: 100%
+    opacity: 0.8
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    overflow: hidden
+  &__view
+    margin-top: 1.5rem
+    +fs(12px)
+    line-height: 1
+    color: rgba(#23262B, .8)
+    &:before
+      content: ''
+      width: 19px
+      height: 19px
+      display: inline-block
+      vertical-align: middle
+      background-image: url(../icon/icon-view.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      margin-right: 0.5rem

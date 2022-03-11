@@ -1,0 +1,49 @@
+mixin team(vars)
+  +b.team
+    +e.inner.inner
+      +e.left
+        +e.P.title Команда проекта
+        +e.IMG.pic(src='/icon/logo-blue.svg' alt='')
+        +e.IMG.logo(src="/images/team.png")
+      +e.middle
+        +e.text
+          p
+            b Жилой комплекс «Дельвиг» – 
+            | проект компании-девелопера 
+            b «Столица Нижний»
+            |, работающей в сфере строительства жилой и коммерческой недвижимости в Нижнем Новгороде с 2003 года.
+          p За время своего существования «Столица Нижний» 
+            b стала ведущим девелопером в регионе, 
+            | осуществляющим полный цикл развития проектов от концептуальной разработки до строительства и последующего управления объектами.«Столица Нижний» одной из первых в городе начала комплексное строительство и занимает первое место по возведению жилья в Нижнем Новгороде.
+      +e.right
+        +b.video
+            +e.IMG.pic(src='/images/video-2.png' alt='')
+            +e.A.play
+  +b.counter
+    +e.inner.inner
+      +e.item
+        +e.P.numb
+          span(data-numb='19') 0
+        +e.P.text лет
+      +e.item
+        +e.P.numb
+          span(data-numb='112') 0
+        +e.P.text домов
+      +e.item
+        +e.P.numb
+          span(data-numb='1700') 0
+          |+
+        +e.P.text квартир
+      +e.item
+        +e.P.numb
+          span(data-numb='44000') 0
+          |+
+        +e.P.text жителей
+      +e.item
+        +e.box
+          +e.P.numb
+            span(data-numb='990000') 0
+            |+
+          +e.sign м
+            sup ²
+        +e.P.text площадь

@@ -1,0 +1,74 @@
+mixin location(vars)
+  +b.location
+    +e.inner.inner
+      +e.head
+        +e.H2.title Расположение
+        +e.P.sign Район, который объединяет в себе комфорт, надежность и красоту.  Вдхновленные лучшими видами и самой природой.
+      +e.tabs
+        +e.nav
+          +e.BUTTON.sl-cat.active
+            +e.SPAN.icon(style="background-image: url(/icon/icon-location-1.svg)")
+            +e.P.text Все (
+              span 4
+              |)
+          +e.BUTTON.sl-cat
+            +e.SPAN.icon(style="background-image: url(/icon/icon-location-2.svg)")
+            +e.P.text Прогулочные зоны (
+              span 3
+              |)
+          +e.BUTTON.sl-cat
+            +e.SPAN.icon(style="background-image: url(/icon/icon-location-3.svg)")
+            +e.P.text Зоны отдыха и развлечений (
+              span 3
+              |)
+          +e.BUTTON.sl-cat
+            +e.SPAN.icon(style="background-image: url(/icon/icon-location-4.svg)")
+            +e.P.text Театры, музеи, концертные площадки (
+              span 6
+              |)
+          +e.BUTTON.sl-cat
+            +e.SPAN.icon(style="background-image: url(/icon/icon-location-5.svg)")
+            +e.P.text Образование (
+              span 9
+              |)
+          +e.BUTTON.sl-cat
+            +e.SPAN.icon(style="background-image: url(/icon/icon-location-6.svg)")
+            +e.P.text ТРЦ (
+              span 4
+              |)
+          +e.BUTTON.sl-cat
+            +e.SPAN.icon(style="background-image: url(/icon/icon-location-7.svg)")
+            +e.P.text Фитнес-клубы (
+              span 2
+              |)
+        +e.map
+          +e.IMG.pic#map(src='/images/stub-map-1.jpg' alt='')
+      +e.slider
+        .swiper-container
+          .swiper-wrapper
+            +e.slide.swiper-slide
+              +e.P.time
+                +e.IMG.i(src='/icon/icon-loc-car.svg' alt='')
+                +e.SPAN.txt 10 мин.
+              +e.IMG.pic(src='/images/location-1.jpg' alt='')
+              +e.P.caption Центр города
+            +e.slide.swiper-slide
+              +e.P.time
+                +e.IMG.i(src='/icon/icon-loc-car.svg' alt='')
+                +e.SPAN.txt 10 мин.
+              +e.IMG.pic(src='/images/location-2.jpg' alt='')
+              +e.P.caption Верхне-Волжская набережная
+            +e.slide.swiper-slide
+              +e.P.time
+                +e.IMG.i(src='/icon/icon-loc-car.svg' alt='')
+                +e.SPAN.txt 10 мин.
+              +e.IMG.pic(src='/images/location-3.jpg' alt='')
+              +e.P.caption Театр оперы и Балета
+        +e.pagination
+          +e.btn_prev
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+          +e.range
+          +e.btn_next
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')

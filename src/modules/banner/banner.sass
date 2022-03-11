@@ -1,0 +1,116 @@
+.banner
+  &__picture
+    width: 100%
+    height: calc(100vh - 30px)
+    position: relative
+    &:after
+      content: ''
+      background: linear-gradient(0deg, rgba(0, 15, 95, 0.81), rgba(0, 15, 95, 0.81))
+      mix-blend-mode: multiply
+      opacity: 0.3
+      position: absolute
+      display: block
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+  &__pic
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: bottom
+  &__content
+    position: absolute
+    top: 35%
+    left: 50%
+    transform: translate(-50%, -50% )
+    z-index: 3
+    overflow: hidden
+  &__sign
+    +fs(12px)
+    color: #fff
+    margin-bottom: 3.5rem
+    span
+      +fs(26px)
+      font-style: italic
+      font-weight: 600
+      display: inline-block
+      margin-left: 0.5rem
+  &__info
+    padding-left: 2.5rem
+    max-width: 630px
+    color: #fff
+    position: relative
+    &::before
+      content: ''
+      width: 1px
+      height: calc(100% - 10px)
+      background: #fff
+      position: absolute
+      top: 10px
+      left: 0
+  &__title
+    +fs(70px)
+    line-height: 1.1
+    letter-spacing: -0.045em
+    text-transform: uppercase
+  &__subtitle
+    margin-top: 0.5rem
+  &__btn
+    margin-top: 3rem
+  &__pag
+    position: absolute
+    width: 40px
+    height: 100%
+    right: 0
+    top: 0
+  &__rad
+    background-clip: padding-box
+    border: solid 1px rgba(255, 255, 255, .5)
+    border-radius: 100%
+    box-sizing: border-box
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 446px
+    height: 446px
+    z-index: 99
+    left: -30px
+    // &:before
+    //   content: ''
+    //   position: absolute
+    //   top: 0
+    //   right: 0
+    //   bottom: 0
+    //   left: 0
+    //   border-radius: inherit
+    //   background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0) 0%)
+    //   display: block
+    //   margin: -1px
+  .swiper-pagination
+    height: 100%
+    top: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-flow: column
+    margin: 0
+
+  .swiper-pagination-bullet
+    width: 4px
+    height: 4px
+    background: #fff
+    opacity: .3
+    margin: 0 0 1.5rem!important
+    transition: .5s ease
+    &:hover
+      width: 10px
+      height: 10px
+      background: #DAA167
+      opacity: 1
+    &.swiper-pagination-bullet-active
+      opacity: 1
+      width: 8px
+      height: 8px
+      

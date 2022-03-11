@@ -1,0 +1,32 @@
+mixin history(state)
+  if state == 'index'
+    +b.history-state
+      +e.inner.inner
+        +e.left
+          +e.P.sign История начинается здесь
+          +e.H2.title Жилой комплекс ДЕЛЬВИГ 
+          +e.text
+            p Многоквартирный дом со встроенными помещениями общественного назначения и 
+              b подземной автостоянкой
+              |. Здание представляет собой Г-образный дом с аркой. В стилистике использованы приемы модернизированного 
+              b «ар-деко»
+              |. Такое решение придает зданию торжественность.
+          +e.controls
+            +e.A.btn(href="#") Продуманные решения
+            +e.A.btn(href="#") Эстетика и функциональность
+          +e.A.info(href="#")
+            +e.IMG.pic(src='/images/history-1.jpg' alt='')
+            +e.P.more Подробнее о А.И. Дельвиге
+            +e.arrow
+              svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke-linecap='round' stroke-linejoin='round')
+        +e.right
+          +b.video
+            +e.IMG.pic(src='/images/video-1.jpg' alt='')
+            +e.A.play
+          +b.A.download(href='#' download)
+            +e.icon
+              +e.IMG.i(src='/icon/icon-download.svg' alt='')
+            +e.content
+              +e.P.title Скачайте буклет
+              +e.P.sign PDF, 3 MB

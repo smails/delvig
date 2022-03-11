@@ -1,0 +1,179 @@
+.history-state
+  padding: 8rem 0
+  &__inner
+    display: flex
+    justify-content: space-between
+  &__left
+    max-width: 555px
+    width: 48%
+    margin-right: 3 rem
+  &__right
+    max-width: 605px
+    width: 50%
+  &__sign
+    text-transform: uppercase
+    +fs(12px)
+    font-weight: 300
+    letter-spacing: 0.15em
+    text-transform: uppercase
+    margin-bottom: 1.5rem
+    line-height: 1
+  &__title
+    margin-bottom: 3rem
+  &__text
+    +fs(14px)
+    font-weight: 300
+    b
+      font-weight: 500
+  &__controls
+    margin-top: 1.5rem
+    display: flex
+    justify-content: space-between
+  &__btn
+    background: #9BB4D9
+    color: #fff
+    border-radius: 3px
+    padding: 12px 18px
+    position: relative
+    +fs(12px)
+    font-weight: 500
+    line-height: 1
+    text-transform: uppercase
+    vertical-align: middle
+    width: 49%
+    box-sizing: border-box
+    &::before
+      content: ''
+      width: 4px
+      height: 4px
+      display: inline-block
+      border-radius: 100%
+      background: #fff
+      margin-right: 1rem
+      vertical-align: middle
+  &__info
+    margin-top: 4rem
+    padding-top: 4rem
+    border-top: 1px solid rgba(#003062, .2)
+    display: flex
+    align-items: center
+    &:hover
+      .history-state__pic
+        border-color: #004E9F
+      .history-state__more
+        color: #004388
+        text-decoration: underline
+      .history-state__arrow
+        transform: scale(1.2)
+        background: #004083
+        path
+          stroke: #fff
+    &:active
+      .history-state__pic
+        border-color:  #002953
+      .history-state__more
+        color:  #002953
+        text-decoration: underline
+      .history-state__arrow
+        background: #002953
+        path
+          stroke: #fff
+  &__pic
+    vertical-align: middle
+    margin-right: 2rem
+    border: 3px solid transparent
+    border-radius: 8px
+    transition: .5s linear
+  &__more
+    +fs(18px)
+    font-weight: 500
+    line-height: 1
+    color: #003062
+    transition: .5s linear
+  &__arrow
+    width: 44px
+    height: 44px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid #003062
+    border-radius: 100%
+    margin-left: 1.2rem
+    transition: .5s linear
+    svg
+      width: 12px
+    path
+      stroke: #003062
+      transition: .5s linear
+.video
+  width: 100%
+  position: relative
+  margin-bottom: 3rem
+  &__pic
+    width: 100%
+    object-fit: cover
+    vertical-align: middle
+  &__play
+    position: absolute
+    width: 90px
+    height: 90px
+    display: flex
+    justify-content: center
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 9
+    background-image: url(../icon/icon-play.svg)
+    background-position: center
+    background-repeat: no-repeat
+    cursor: pointer
+    &:after
+      content: ''
+      width: 100%
+      height: 100%
+      background-image: url(../icon/icon-play-over.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      animation: 30s linear 0s normal none infinite running rot
+      display: block
+
+.download
+  display: flex
+  align-items: center
+  &:hover
+    .download__title
+      color: #004388
+      text-decoration: underline
+    .download__icon
+      transform: scale(1.2)
+      background: #004083
+  &:active
+    .download__icon
+      background:  #002953
+    .download__title
+      color:  #002953
+      text-decoration: underline
+  &__icon
+    width: 38px
+    height: 38px
+    margin-right: 1rem
+    background: #003062
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 100%
+    transition: .5s ease
+  &__i
+    vertical-align: middle
+  &__title
+    font-weight: 500
+    line-height: 1
+    transition: .5s ease
+  &__sign
+    font-weight: 500
+    +fs(10px)
+    color: #838C95
+    opacity: 0.8
+    line-height: 1
+    margin-top: .5rem

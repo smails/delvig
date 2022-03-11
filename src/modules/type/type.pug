@@ -1,0 +1,62 @@
+mixin type(vars)
+  +b.type
+    +e.inner.inner
+      +e.head
+        +e.H2.title типы планировок
+        +e.A.more.btn_blue Смотреть все планировки и цены
+      +e.tabs
+        +e.nav
+          +e.BUTTON.btn.active(data-mtitle="1-комнатные") 1-комнатные
+          +e.BUTTON.btn(data-mtitle="2-комнатные") 2-комнатные
+          +e.BUTTON.btn(data-mtitle="3-комнатные") 3-комнатные
+          +e.BUTTON.btn(data-mtitle="4-комнатные") 4-комнатные
+          +e.BUTTON.btn(data-mtitle="Парковочное место") Парковочное место
+        +e.wrap
+          +e.item
+            +e.select-type
+              +e.BUTTON.sl-btn.active Тип 
+                span 1
+              +e.BUTTON.sl-btn Тип 
+                span 2
+              +e.BUTTON.sl-btn Тип 
+                span 3
+              +e.BUTTON.sl-btn Тип 
+                span 4
+              +e.BUTTON.sl-btn Тип 
+                span 5
+              +e.BUTTON.sl-btn Тип 
+                span 6
+              +e.BUTTON.sl-btn Тип 
+                span 7
+              +e.BUTTON.sl-btn Тип 
+                span 8
+            +b.type-plane
+              +e.wrap
+                +e.picture
+                  +e.IMG.pic(src='/images/plane-1.jpg' alt='')
+                  +e.select-plane
+                    +e.sl-btn.active Планировка
+                    +e.sl-btn На этаже
+                +e.content
+                  +e.P.title 1-комнатные
+                  +e.square
+                    +e.P.cap Общая площадь:
+                    +e.P.val 32,4 — 35,2 м
+                      sup 2
+                  +e.list
+                    +e.item
+                      +e.IMG.i(src='/icon/icon-plane-1.svg' alt='')
+                      +e.P.caption 3 квартиры на этаже
+                    +e.item
+                      +e.IMG.i(src='/icon/icon-plane-2.svg' alt='')
+                      +e.P.caption Вид на реку
+                    +e.item
+                      +e.IMG.i(src='/icon/icon-plane-3.svg' alt='')
+                      +e.P.caption Терраса
+                    +e.item
+                      +e.IMG.i(src='/icon/icon-plane-4.svg' alt='')
+                      +e.P.caption Высота потолков 2,7-3 метра
+                  +e.control
+                    +e.A.more.btn_brown-transparent(href="#") Смотреть планировки этого типа
+                    +e.A.more.btn_brown.js-open-modal(href="#callback") Оставить заявку
+              +e.P.sign Все квартиры в ЖК Дельвиг свободной планировки и сдаются без отделки. Представленное разделение на комнаты и расстановка перегородок - носит условный характер и является одним из возможных способов зонирования пространства.

@@ -1,0 +1,61 @@
+mixin news(state)
+  if state == 'index'
+    +b.news
+      +e.head.inner
+        +e.H2.title Новости
+        +e.control
+          +e.A.more(href='#') Все новости
+          +e.pagination
+            +e.btn_prev
+              svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke-linecap='round' stroke-linejoin='round')
+            +e.btn_next
+              svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke-linecap='round' stroke-linejoin='round')
+      +e.slider.swiper-container
+        .swiper-wrapper
+          +e.slide.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/news-1.png' alt='')
+            +e.content
+              +e.P.date 25.01.2022
+              +e.P.caption Cистема видеонаблюдения снаружи и внутри комплекса
+              +e.text
+                p Район, который объединяет в себе комфорт, надежность и красоту.  Вдхновленные лучшим...
+              +e.view 1 313
+          +e.slide.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/news-2.png' alt='')
+            +e.content
+              +e.P.date 25.01.2022
+              +e.P.caption Cистема видеонаблюдения снаружи и внутри комплекса
+              +e.text
+                p Район, который объединяет в себе комфорт, надежность и красоту.  Вдхновленные лучшим...
+              +e.view 1 313
+          +e.slide.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/news-3.png' alt='')
+            +e.content
+              +e.P.date 25.01.2022
+              +e.P.caption Безопасность и сохранность вашего имущества
+              +e.text
+                p Район, который объединяет в себе комфорт, надежность и красоту.  Вдхновленные лучшим...
+              +e.view 75
+          +e.slide.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/news-4.png' alt='')
+            +e.content
+              +e.P.date 25.01.2022
+              +e.P.caption Добраться до вашего автомобиля
+              +e.text
+                p Район, который объединяет в себе комфорт, надежность и красоту.  Вдхновленные лучшим...
+              +e.view 75
+          +e.slide.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/news-5.png' alt='')
+            +e.content
+              +e.P.date 25.01.2022
+              +e.P.caption Добраться до вашего автомобиля
+              +e.text
+                p Район, который объединяет в себе комфорт, надежность и красоту.  Вдхновленные лучшим...
+              +e.view 75

@@ -1,0 +1,78 @@
+mixin build(state)
+  if state == 'arch'
+    +b.build
+      +e.head.inner
+        +e.H2.title Архитектура
+        +e.P.sign Архитектурное бюро и Столица Нижний создают уникальный жилой комплекс, сочетающий в себе смелые архитектурные решения, функциональность и чувственность.
+      +e.slider.swiper-container
+        .swiper-wrapper
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/build-1.jpg' alt='')
+            +e.content
+              +e.P.caption Северное крыло
+              +e.text
+                p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/build-1.jpg' alt='')
+            +e.content
+              +e.P.caption Северное крыло
+              +e.text
+                p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/build-1.jpg' alt='')
+            +e.content
+              +e.P.caption Северное крыло
+              +e.text
+                p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/build-1.jpg' alt='')
+            +e.content
+              +e.P.caption Северное крыло
+              +e.text
+                p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+        +e.pagination
+          +e.btn_prev
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+          +e.range
+          +e.btn_next
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+  if state == 'step'
+    +b.step-build
+      +e.inner.inner
+        +e.head
+          +e.H2.title Ход строительства
+          +e.pagination
+            +e.btn_prev.disabled
+              svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+            +e.btn_next
+              svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+        +e.slider.swiper-container
+          .swiper-wrapper
+            +e.slide.swiper-slide
+              +e.IMG.pic(src='/images/step-build-1.png' alt='')
+              +e.caption Январь 2022
+            +e.slide.swiper-slide
+              +e.IMG.pic(src='/images/step-build-2.png' alt='')
+              +e.caption Декабрь 2021
+            +e.slide.swiper-slide
+              +e.IMG.pic(src='/images/step-build-3.png' alt='')
+              +e.caption Ноябрь 2021
+            +e.slide.swiper-slide
+              +e.IMG.pic(src='/images/step-build-4.png' alt='')
+              +e.caption Октябрь 2022
+            +e.slide.swiper-slide
+              +e.IMG.pic(src='/images/step-build-1.png' alt='')
+              +e.caption Январь 2022
+            +e.slide.swiper-slide
+              +e.IMG.pic(src='/images/step-build-2.png' alt='')
+              +e.caption Декабрь 2021
+            +e.slide.swiper-slide
+              +e.IMG.pic(src='/images/step-build-3.png' alt='')
+              +e.caption Ноябрь 2021
+            +e.slide.swiper-slide
+              +e.IMG.pic(src='/images/step-build-4.png' alt='')
+              +e.caption Октябрь 2022

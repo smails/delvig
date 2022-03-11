@@ -1,0 +1,62 @@
+.team
+  margin-top: 10rem
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding-bottom: 6rem
+    border-bottom: 1px solid rgba(#003062, .2)
+  &__left
+    margin-right: 3rem
+    max-width: 355px
+  &__middle
+    margin-right: 2rem
+    max-width: 320px
+  &__right
+    max-width: 430px
+  &__title
+    font-weight: 500
+    +fs(42px)
+    line-height: 1
+    color: #003062
+    margin-bottom: 3rem
+  &__logo
+    margin-top: 6rem
+    max-width: 100%
+  &__text
+    color: #464646
+    line-height: 1.4
+    p
+      margin-bottom: 1rem
+
+.counter
+  padding: 6rem 0
+  &__inner
+    display: flex
+    justify-content: space-between
+  &__numb
+    +fs(70px)
+    font-weight: 500
+    font-family: $ff2
+    letter-spacing: -0.005em
+    position: relative
+    line-height: 1
+    font-style: italic
+    margin-bottom: 1rem
+    color: #23262B
+  &__text
+    +fs(17px)
+    opacity: 0.6
+    letter-spacing: -0.005em
+    text-transform: uppercase
+  &__sign
+    font-size: 26px
+    position: absolute
+    top: -10px
+    right: 0
+    letter-spacing: -0.02em
+    line-height: 1
+    font-family: $ff2
+    font-style: italic
+  &__box
+    position: relative

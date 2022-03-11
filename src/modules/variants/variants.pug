@@ -1,0 +1,34 @@
+mixin variants(vars)
+  +b.variants
+    +e.inner.inner
+      +e.head
+        +e.H2.title что вы получаете
+        +e.pagination
+          +e.btn_prev.disabled
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+          +e.btn_next
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+      +e.slider.swiper-container
+        .swiper-wrapper
+          +e.slide.swiper-slide
+            +e.numb 01
+            +e.IMG.pic(src='/images/variants-1.jpg' alt='')
+            +e.caption Мастер-спальни
+          +e.slide.swiper-slide
+            +e.numb 02
+            +e.IMG.pic(src='/images/variants-2.jpg' alt='')
+            +e.caption Ниши под гардероб
+          +e.slide.swiper-slide
+            +e.numb 03
+            +e.IMG.pic(src='/images/variants-3.jpg' alt='')
+            +e.caption Просторные кухни
+          +e.slide.swiper-slide
+            +e.numb 04
+            +e.IMG.pic(src='/images/variants-4.jpg' alt='')
+            +e.caption Окна увеличенного размера
+          +e.slide.swiper-slide
+            +e.numb 05
+            +e.IMG.pic(src='/images/variants-5.jpg' alt='')
+            +e.caption Эркеры

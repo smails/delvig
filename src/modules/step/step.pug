@@ -1,0 +1,36 @@
+mixin step(state)
+  if state == 'buy'
+    +b.step-buy
+      +e.inner.inner
+        +e.P.title Как приобрести
+        +e.list
+          +e.item
+            +e.icon
+              +e.IMG.i(src='/icon/icon-step-buy-1.svg' alt='')
+            +e.P.numb 01
+            +e.P.caption Оплата наличными
+          +e.item
+            +e.icon
+              +e.IMG.i(src='/icon/icon-step-buy-2.svg' alt='')
+            +e.P.numb 02
+            +e.P.caption Ипотека
+          +e.item
+            +e.icon
+              +e.IMG.i(src='/icon/icon-step-buy-3.svg' alt='')
+            +e.P.numb 03
+            +e.P.caption Рассрочка
+          +e.item
+            +e.icon
+              +e.IMG.i(src='/icon/icon-step-buy-4.svg' alt='')
+            +e.P.numb 04
+            +e.P.caption Trade-in
+          +e.item
+            +e.icon
+              +e.IMG.i(src='/icon/icon-step-buy-5.svg' alt='')
+            +e.P.numb 05
+            +e.P.caption Гос.программы
+          +e.item
+            +e.icon
+              +e.IMG.i(src='/icon/icon-step-buy-6.svg' alt='')
+            +e.P.numb 06
+            +e.P.caption Мат.капитал

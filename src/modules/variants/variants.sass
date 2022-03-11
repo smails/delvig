@@ -1,0 +1,105 @@
+.variants
+  padding: 10rem 0 0
+  margin-bottom: 10rem
+  position: relative
+  margin-right: 5rem
+  &:before
+    content: ''
+    width: calc(100% - ((100% - 1150px) / 2))
+    height: 1px
+    background: #003062
+    opacity: 0.3
+    right: 25px
+    bottom: 0
+    position: absolute
+  &:after
+    content: ''
+    max-width: 665px
+    width: 100%
+    height: 1px
+    background: #003062
+    left: calc((100% - 1200px) / 2)
+    bottom: 0
+    position: absolute
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__pagination
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 250px
+  &__slider
+    overflow: inherit
+    margin-top: 4rem
+    padding-bottom: 4rem
+  &__btn
+    width: 53px
+    height: 53px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid #003062
+    border-radius: 100%
+    margin-left: 1.2rem
+    transition: .5s linear
+    flex-shrink: 0
+    cursor: pointer
+    &_next
+      margin-left: 2rem
+    svg
+      width: 12px
+    path
+      stroke: #003062
+      transition: .5s linear
+    &.disabled
+      opacity: .2
+    &:hover
+      transform: scale(1.1)
+      background: #004083
+      border-color: #004083
+      path
+        stroke: #fff
+    &:active
+      background: #002953
+      border-color: #002953
+      path
+        stroke: #fff
+  &__slide
+    position: relative
+    border-radius: 3px
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      background: linear-gradient(177.11deg, rgba(0, 0, 0, 0.2) 5.45%, rgba(0, 0, 0, 0) 15.21%)
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+  &__pic
+    vertical-align: middle
+    width: 100%
+    border-radius: 3px
+  &__caption
+    position: absolute
+    z-index: 2
+    padding: 12px 14px
+    background: #FFFFFF
+    border-radius: 3px
+    text-transform: uppercase
+    line-height: 1.1
+    font-weight: 600
+    bottom: 1px
+    left: 1px
+    max-width: 210px
+  &__numb
+    position: absolute
+    +fs(24px)
+    font-family: $ff2
+    opacity: 0.8
+    top: .5rem
+    left: 1rem
+    z-index: 2
+    color: #fff

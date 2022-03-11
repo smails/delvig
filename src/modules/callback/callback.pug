@@ -1,0 +1,21 @@
+mixin callback(vesion)
+  if vesion == 'v1'
+    +b.subscribe
+      +e.inner.inner
+        +e.FORM.action
+          +e.info
+            +e.P.title Подпишись на новости
+            +e.P.subtitle И будь в курс актуальных событий 
+          +e.form
+            +e.group
+              +b.group
+                +e.SPAN.name Имя
+                +e.INPUT.field.required(type="text")
+            +e.group
+              +b.group
+                +e.SPAN.name E-mail*
+                +e.INPUT.field.required(type="text")
+            +e.control
+              +e.BUTTON.submit Подписаться
+              +e.sign Нажимая «Подписаться» Вы соглашаетесь с условиями 
+                a(href="#")  обработки персональных данных

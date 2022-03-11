@@ -1,0 +1,40 @@
+mixin landscaping(vars)
+  +b.landscaping
+    +e.head.inner
+      +e.H2.title Благоустройство
+        span вашего будущего дома
+      +e.P.sign Дом — это ведь не место, это чувство… Стоит переступить порог дома, и на душе всегда становится легче.
+    +e.slider.swiper-container
+      .swiper-wrapper
+        +e.slide.swiper-slide
+          +e.IMG.pic(src='/images/landscaping-1.jpg' alt='')
+          +e.content
+            +e.P.caption Вечерние закаты
+            +e.text
+              p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+        +e.slide.swiper-slide
+          +e.IMG.pic(src='/images/landscaping-1.jpg' alt='')
+          +e.content
+            +e.P.caption Вечерние закаты
+            +e.text
+              p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+        +e.slide.swiper-slide
+          +e.IMG.pic(src='/images/landscaping-1.jpg' alt='')
+          +e.content
+            +e.P.caption Вечерние закаты
+            +e.text
+              p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+        +e.slide.swiper-slide
+          +e.IMG.pic(src='/images/landscaping-1.jpg' alt='')
+          +e.content
+            +e.P.caption Вечерние закаты
+            +e.text
+              p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+      +e.pagination
+        +e.btn_prev
+          svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+            path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+        +e.range
+        +e.btn_next
+          svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+            path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')

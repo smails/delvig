@@ -1,0 +1,67 @@
+.subscribe
+  margin-top: 6rem
+  &__action
+    display: flex
+    padding: 5rem 4rem
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    background: #9B4D4D
+    border-radius: 6px
+    overflow: hidden
+    position: relative
+    &:before
+      content: ''
+      width: 750px
+      height: 750px
+      border-radius: 100%
+      right: -45px
+      top: 50%
+      transform: translateY(-50%)
+      background: #79433F
+      opacity: 0.7
+      backdrop-filter: blur(29px)
+      position: absolute
+  &__title
+    font-weight: 600
+    +fs(34px)
+    color: #fff
+    line-height: 1
+    margin-bottom: 1.2rem
+  &__subtitle
+    +fs(16px)
+    color: #fff
+    opacity: 0.6
+  &__form
+    max-width: 600px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    position: relative
+    padding-right: 16rem
+    box-sizing: border-box
+    width: 100%
+  &__group
+    max-width: 185px
+    width: 48%
+    margin-top: 1rem
+  &__control
+    flex-grow: 1
+    margin-top: 2rem
+  &__sign
+    +fs(10px)
+    color: #CDA8A6
+    a
+      text-decoration: underline
+      color: inherit
+  &__submit
+    position: absolute
+    top: 0
+    right: 0
+    background: rgba(#F3F1DF,  0.8)
+    border-radius: 3px
+    padding: 13px 25px 11px
+    +fs(14px)
+    font-weight: 500
+    line-height: 1
+    color: #834643

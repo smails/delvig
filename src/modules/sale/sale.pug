@@ -1,0 +1,73 @@
+mixin sale(state)
+  if state == 'index'
+    +b.sale
+      +e.head.inner
+        +e.H2.title Акции
+        +e.control
+          +e.A.more(href='#') Все акции
+          +e.pagination
+            +e.btn_prev
+              svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke-linecap='round' stroke-linejoin='round')
+            +e.btn_next
+              svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke-linecap='round' stroke-linejoin='round')
+      +e.slider.swiper-container
+        .swiper-wrapper
+          +e.slide_large.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/sale-9.png' alt='')
+              +e.caption Посмотреть квартиру
+          +e.slide_large.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/sale-1.png' alt='')
+              +e.caption Выберите интересующую вас планировку
+          +e.slide_small.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/sale-2.png' alt='')
+              +e.caption Посмотреть квартиру
+          +e.slide_small.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/sale-3.png' alt='')
+              +e.caption Высокие потолки
+          +e.slide_large.swiper-slide
+            +e.A.link(href='#')
+              +e.IMG.pic(src='/images/sale-5.png' alt='')
+              +e.caption Выберите интересующую вас планировку
+  if state == 'page'
+    +b.sale-page.section
+      +e.inner.inner
+        +b.A.back(href="#") < Назад
+        +e.H1.title Акции
+        +e.list
+          +e.A.link_large(href='#')
+            +e.IMG.pic(src='/images/sale-1.png' alt='')
+            +e.caption Выберите интересующую вас планировку
+          +e.A.link_small(href='#')
+            +e.IMG.pic(src='/images/sale-2.png' alt='')
+            +e.caption Посмотреть квартиру
+          +e.A.link_small(href='#')
+            +e.IMG.pic(src='/images/sale-3.png' alt='')
+            +e.caption Высокие потолки
+          +e.A.link_small(href='#')
+            +e.IMG.pic(src='/images/sale-4.png' alt='')
+            +e.caption Посмотреть квартиру
+          +e.A.link_large(href='#')
+            +e.IMG.pic(src='/images/sale-5.png' alt='')
+            +e.caption Выберите интересующую вас планировку
+          +e.A.link_small(href='#')
+            +e.IMG.pic(src='/images/sale-6.png' alt='')
+            +e.caption Высокие потолки
+          +e.A.link_small(href='#')
+            +e.IMG.pic(src='/images/sale-7.png' alt='')
+            +e.caption Посмотреть квартиру
+          +e.A.link_small(href='#')
+            +e.IMG.pic(src='/images/sale-8.png' alt='')
+            +e.caption Высокие потолки
+          +e.A.link_large(href='#')
+            +e.IMG.pic(src='/images/sale-9.png' alt='')
+            +e.caption Выберите интересующую вас планировку
+        +e.control
+          +e.BUTTON.btn.btn_brown Показать еще (
+            span 32
+            |)

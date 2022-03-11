@@ -1,0 +1,62 @@
+mixin flat(vars)
+  +b.flat
+    +e.inner.inner
+      +e.head
+        +e.left
+          +e.P.sign Общественные пространства
+          +e.numb
+            +e.P.numb-title 510
+            +e.P.numb-subtitle квартир
+        +e.right
+          +e.P.txt Не так важно, на каком этаже ваша квартира и куда выходят окна. Но точно важно, куда выходите вы и чем вы дышите. Сегодня - тот самый день, чтобы стать еще счастливее
+      +e.wrap
+        +e.col
+          +e.P.top
+            span 1 
+            | этаж
+          +e.slider.swiper-container
+            .swiper-wrapper
+              +e.slide.swiper-slide
+                +e.IMG.pic(src='/images/view-1.jpg' alt='')
+                +e.content
+                  +e.P.caption Большие этажи
+                  +e.text
+                    p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+              +e.slide.swiper-slide
+                +e.IMG.pic(src='/images/view-2.jpg' alt='')
+                +e.content
+                  +e.P.caption Вечерние закаты
+                  +e.text
+                    p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+            +e.pagination
+              +e.btn_prev
+                svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                  path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+              +e.btn_next
+                svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                  path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+        +e.col
+          +e.P.top
+            span 2 
+            | этаж
+          +e.slider.swiper-container
+            .swiper-wrapper
+              +e.slide.swiper-slide
+                +e.IMG.pic(src='/images/view-2.jpg' alt='')
+                +e.content
+                  +e.P.caption Большие этажи
+                  +e.text
+                    p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+              +e.slide.swiper-slide
+                +e.IMG.pic(src='/images/view-1.jpg' alt='')
+                +e.content
+                  +e.P.caption Вечерние закаты
+                  +e.text
+                    p Из окон открывается прекрасный вид на Верхне-Волжскую набережную
+            +e.pagination
+              +e.btn_prev
+                svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                  path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+              +e.btn_next
+                svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+                  path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')

@@ -1,0 +1,147 @@
+.location
+  margin-top: 9.5rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 6rem
+  &__sign
+    +fs(18px)
+    color: rgba($c1, .8)
+    line-height: 1.4
+    position: relative
+    padding-left: 2rem
+    box-sizing: border-box
+    max-width: 550px
+  &__nav
+    display: flex
+    border-bottom: 1px solid rgba(#003062, .15)
+  &__sl-cat
+    display: flex
+    align-items: center
+    margin-right: 3%
+    padding-bottom: 0.85rem
+    position: relative
+    &:hover
+      color: #004083
+      .location__icon
+        background-color: rgba(#A3BFE9, .5)
+    &:after
+      content: ''
+      width: 0
+      height: 1px
+      background-color:#003062
+      position: absolute
+      bottom: 0
+      left: 0
+      transition: .5s ease
+    &.active
+      color: #003062
+      .location__icon
+        background-color: #004083
+      .location__text
+        color: #004083
+      &:after
+        width: 100%
+  &__icon
+    width: 30px
+    height: 30px
+    background-color: #5F7E9E
+    border-radius: 100%
+    margin-right: 0.8rem
+    background-position: center
+    background-repeat: no-repeat
+    transition: .5s ease
+  &__text
+    +fs(12px)
+    font-weight: 500
+    letter-spacing: -0.02em
+    line-height: 1
+    color: #003062
+  &__map
+    margin-top: 1.2rem
+  &__btn
+    width: 45px
+    height: 45px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid #003062
+    border-radius: 100%
+    transition: .5s linear
+    flex-shrink: 0
+    cursor: pointer
+    background: #003062
+    svg
+      width: 16px
+    path
+      stroke: #fff
+      transition: .5s linear
+    &.disabled
+      opacity: .2
+    &:hover
+      transform: scale(1.1)
+      background: #004083
+      border-color: #004083
+      path
+        stroke: #fff
+    &:active
+      background: #fff
+      border-color: #002953
+      path
+        stroke: #003062
+  &__slider
+    position: relative
+    margin-top: 3rem
+  &__slide
+    border-radius: 3px
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 10.64%, rgba(0, 0, 0, 0) 31.12%)
+      border-radius: 3px
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+  &__time
+    background: #FFFFFF
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08)
+    border-radius: 108px
+    padding: 8px 10px
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    position: absolute
+    top: 10px
+    left: 10px
+    z-index: 2
+  &__i
+    vertical-align: middle
+  &__txt
+    margin-left: 5px
+    line-height: 1
+    font-weight: 500
+    +fs(12px)
+    letter-spacing: -0.02em
+    color: #003062
+  &__caption
+    position: absolute
+    bottom: 10px
+    left: 10px
+    z-index: 2
+    color: #fff
+    font-weight: 600
+    letter-spacing: -0.02em
+  &__pic
+    vertical-align: middle
+    border-radius: 3px
+  &__pagination
+    position: absolute
+    width: calc(100% + 160px)
+    display: flex
+    justify-content: space-between
+    left: -80px
+    top: 50%
+    transform: translateY(-50%)

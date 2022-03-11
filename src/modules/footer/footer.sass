@@ -1,0 +1,241 @@
+.footer-callback
+  display: flex
+  &__left
+    background: #003062
+    border-radius: 6px
+    padding: 10rem 13rem 5rem 9rem
+    box-sizing: border-box
+    flex-shrink: 0
+    box-sizing: border-box
+    max-width: 635px
+  &__title
+    text-transform: uppercase
+    +fs(48px)
+    line-height: 1
+    text-transform: uppercase
+    color: #FFFFFF
+    margin-bottom: 6rem
+  &__cnt
+    display: flex
+    align-items: flex-start
+    margin-bottom: 5rem
+  &__cnt-icon
+    width: 50px
+    height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: rgba(#fff, .1)
+    margin-right: 2rem
+    flex-shrink: 0
+    border-radius: 100%
+  &__cnt-title
+    text-transform: uppercase
+    +fs(12px)
+    opacity: .4
+    letter-spacing: 0.115em
+    text-transform: uppercase
+    line-height: 1
+    margin-bottom: 1rem
+    color: #fff
+    margin-top: 1rem
+  &__cnt-val
+    +fs(14px)
+    color: #fff
+    line-height: 1.4
+    p
+      margin-bottom: 0.2rem
+      span
+        opacity: 0.5
+  &__right
+    margin-top: 3rem
+    margin-left: -5rem
+    width: 70%
+  &__map
+    height: calc(100% - 252px)
+    #map-footer
+      height: 100%
+      width: 100%
+      object-fit: cover
+.callback-bottom
+  background: #181D24
+  border-radius: 6px
+  padding: 5.5rem 10% 3rem
+  box-sizing: border-box
+  color: #fff
+  display: flex
+  justify-content: space-between
+  &__left
+    max-width: 470px
+    width: 46%
+  &__right
+    max-width: 450px
+    width: 45%
+  &__title
+    +fs(40px)
+    font-family: $ff2
+    line-height: 1
+    margin-bottom: 2rem
+  &__phone
+    +fs(66px)
+    font-family: $ff2
+    line-height: 1
+    margin-bottom: 2rem
+    color: inherit
+  &__time
+    +fs(14px)
+    margin-top: 2rem
+    opacity: 0.6
+  &__form
+    display: flex
+    align-items: flex-start
+    flex-flow: column
+    position: relative
+  &__group
+    max-width: 200px
+    margin-bottom: 2rem
+    width: 100%
+  &__sign
+    margin-top: 5.5rem
+    +fs(10px)
+    color: rgba(255, 255, 255, 0.72)
+    a
+      color: inherit
+  &__submit
+    background: #fff
+    border-radius: 3px
+    padding: 13px 25px 11px
+    +fs(14px)
+    font-weight: 500
+    line-height: 1
+    color: #181D24
+    order: 1
+    right: 0
+    bottom: 2rem
+    position: absolute
+.social
+  margin-top: 6rem
+  &__title
+    color: #fff
+    letter-spacing: 0.115em
+    text-transform: uppercase
+    padding-bottom: .8rem
+    line-height: 1
+    font-weight: 600
+    border-bottom: 1px solid rgba(#fff, 0.4)
+  &__list
+    margin-top: 2rem
+    display: flex
+    justify-content: space-between
+  &__link
+    width: 60px
+    height: 60px
+    border: 1px solid #FFFFFF
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .5s ease
+    border-radius: 100%
+    &:hover
+      border-color: #B04E47
+      background: #B04E47
+
+.text-bottom
+  padding: 5rem 10rem 4.5rem
+  +fs(12px)
+  line-height: 1.4
+  color: #838C95
+.footer
+  padding: 3.2rem 0 2.9rem
+  background: #181D24
+  color: #fff
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__copy
+    +fs(14px)
+    line-height: 1
+  &__link
+    +fs(14px)
+    color: inherit
+    line-height: 1
+
+.footer-sale
+  position: relative
+  padding: 15rem 0
+  background: linear-gradient(108.18deg, #CE9C69 -2.75%, #DED4CA 128.14%)
+  overflow: hidden
+  &:before
+    content: ''
+    width: 70vw
+    height: 70vw
+    border-radius: 100%
+    background: #5F1700
+    opacity: 0.15
+    bottom: -40vw
+    right: -7.5%
+    display: block
+    position: absolute
+  &__inner
+    position: relative
+  &__action
+    max-width: 560px
+    width: 100%
+    color: #fff
+    padding-left: 4rem
+    box-sizing: border-box
+    position: relative
+    &::before
+      content: ''
+      width: 2px
+      height: calc(100% - 40px)
+      left: 0
+      top: 10px
+      background: #fff
+      position: absolute
+      display: block
+  &__title
+    +fs(76px)
+    font-weight: 700
+    letter-spacing: -0.045em
+    text-transform: uppercase
+    line-height: 1.1
+    margin-bottom: 3rem
+  &__subtitle
+    +fs(20px)
+    font-weight: 500
+    margin-bottom: 6rem
+  &__row
+    display: flex
+    justify-content: space-between
+    max-width: 460px
+  &__group
+    max-width: 210px
+    width: 48%
+  &__sign
+    +fs(10px)
+    margin-top: 2rem
+    a
+      text-decoration: underline
+      color: inherit
+  &__submit
+    margin-top: 3rem
+  &__text
+    +fs(16px)
+    color: #fff
+    position: absolute
+    right: 0
+    top: -75px
+    transform: rotate(-90deg)
+    transform-origin: right
+    span
+      +fs(34px)
+      font-style: italic
+      font-weight: 600
+      display: inline-block
+      margin-left: 0.5rem
+  &__pic
+    position: absolute
+    right: 0
+    bottom: 0
