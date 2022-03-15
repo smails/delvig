@@ -1,5 +1,7 @@
 /* eslint-disable eqeqeq */
-
+function isTouchDevice(){
+    return typeof window.ontouchstart !== 'undefined';
+}
 $('.js-open-modal').click((e) => {
   e.preventDefault();
   $('.modal').hide();

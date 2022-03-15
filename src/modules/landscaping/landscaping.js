@@ -7,6 +7,14 @@ const landscaping = new Swiper('.landscaping__slider', {
     el: '.landscaping__range',
     type: 'fraction'
   },
+  breakpoints: {
+    1200: {
+      pagination: {
+        el: '.landscaping__range',
+        type: 'bullets'
+      },
+    },
+  },
 });
 
 $('.landscaping__btn_next').click(() =>{

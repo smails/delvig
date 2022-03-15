@@ -1,15 +1,36 @@
 .history-state
   padding: 8rem 0
+  +screen('max', 1200)
+    padding: 6rem 0
+  +screen('max', 575)
+    padding: 6rem 0 4rem
   &__inner
     display: flex
     justify-content: space-between
+    +screen('max', 1200)
+      position: relative
+      padding-top: 100px
+      padding-bottom: 100px
+    +screen('max', 575)
+      padding-top: 0
+      padding-bottom: 0
+      display: block
   &__left
     max-width: 555px
     width: 48%
-    margin-right: 3 rem
+    margin-right: 3rem
+    +screen('max', 575)
+      margin-right: 0
+      width: 100%
   &__right
     max-width: 605px
     width: 50%
+    +screen('max', 1200)
+      width: 40%
+    +screen('max', 1023)
+      width: 50%
+    +screen('max', 575)
+      width: 100%
   &__sign
     text-transform: uppercase
     +fs(12px)
@@ -18,8 +39,19 @@
     text-transform: uppercase
     margin-bottom: 1.5rem
     line-height: 1
+    +screen('max', 1200)
+      position: absolute
+      top: 0
+    +screen('max', 575)
+      position: relative
   &__title
     margin-bottom: 3rem
+    +screen('max', 1200)
+      position: absolute
+      top: 20px
+    +screen('max', 575)
+      position: relative
+      top: 0
   &__text
     +fs(14px)
     font-weight: 300
@@ -29,6 +61,8 @@
     margin-top: 1.5rem
     display: flex
     justify-content: space-between
+    +screen('max', 1200)
+      display: block
   &__btn
     background: #9BB4D9
     color: #fff
@@ -42,6 +76,10 @@
     vertical-align: middle
     width: 49%
     box-sizing: border-box
+    +screen('max', 1200)
+      width: auto
+      display: inline-block
+      margin-bottom: 1rem
     &::before
       content: ''
       width: 4px
@@ -57,6 +95,17 @@
     border-top: 1px solid rgba(#003062, .2)
     display: flex
     align-items: center
+    +screen('max', 1200)
+      margin-top: 0
+      padding-top: 1rem
+      position: absolute
+      bottom: 0
+      width: calc(100% - 8rem)
+    +screen('max', 575)
+      width: 100%
+      position: relative
+      padding: 2rem 0
+      justify-content: space-between
     &:hover
       .history-state__pic
         border-color: #004E9F
@@ -105,6 +154,10 @@
     path
       stroke: #003062
       transition: .5s linear
+  .video
+    +screen('max', 575)
+      width: calc(100% + 2rem)
+      left: -1rem
 .video
   width: 100%
   position: relative
@@ -137,7 +190,21 @@
       background-size: contain
       animation: 30s linear 0s normal none infinite running rot
       display: block
-
+  &__view
+    margin-top: 3rem
+    +fs(16px)
+    line-height: 1
+    color: rgba(#23262B, .8)
+    &:before
+      content: ''
+      width: 24px
+      height: 24px
+      display: inline-block
+      vertical-align: middle
+      background-image: url(../icon/icon-view.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      margin-right: 1rem
 .download
   display: flex
   align-items: center

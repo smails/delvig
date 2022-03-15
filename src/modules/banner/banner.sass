@@ -3,6 +3,8 @@
     width: 100%
     height: calc(100vh - 30px)
     position: relative
+    +screen('max', 575)
+      height: 80vh
     &:after
       content: ''
       background: linear-gradient(0deg, rgba(0, 15, 95, 0.81), rgba(0, 15, 95, 0.81))
@@ -19,6 +21,8 @@
     height: 100%
     object-fit: cover
     object-position: bottom
+    +screen('max', 575)
+      object-position: 70%
   &__content
     position: absolute
     top: 35%
@@ -26,6 +30,12 @@
     transform: translate(-50%, -50% )
     z-index: 3
     overflow: hidden
+    +screen('max', 1200)
+      top: 38%
+    +screen('max', 1023)
+      top: 30%
+    +screen('max', 575)
+      top: 35%
   &__sign
     +fs(12px)
     color: #fff
@@ -36,6 +46,7 @@
       font-weight: 600
       display: inline-block
       margin-left: 0.5rem
+      font-family: $ff2
   &__info
     padding-left: 2.5rem
     max-width: 630px
@@ -54,6 +65,9 @@
     line-height: 1.1
     letter-spacing: -0.045em
     text-transform: uppercase
+    font-weight: 700
+    +screen('max', 575)
+      +fs(36px)
   &__subtitle
     margin-top: 0.5rem
   &__btn
@@ -64,6 +78,11 @@
     height: 100%
     right: 0
     top: 0
+    +screen('max', 1200)
+      width: 100%
+      height: 40px
+      bottom: 0
+      top: auto
   &__rad
     background-clip: padding-box
     border: solid 1px rgba(255, 255, 255, .5)
@@ -76,6 +95,8 @@
     height: 446px
     z-index: 99
     left: -30px
+    +screen('max', 1200)
+      display: none
     // &:before
     //   content: ''
     //   position: absolute
@@ -96,7 +117,8 @@
     align-items: center
     flex-flow: column
     margin: 0
-
+    +screen('max', 1200)
+      flex-flow: row
   .swiper-pagination-bullet
     width: 4px
     height: 4px
@@ -104,6 +126,8 @@
     opacity: .3
     margin: 0 0 1.5rem!important
     transition: .5s ease
+    +screen('max', 1200)
+      margin: 0 1.5rem!important
     &:hover
       width: 10px
       height: 10px

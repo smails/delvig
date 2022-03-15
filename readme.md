@@ -1,6 +1,6 @@
 # Smailsjob project
 
-## Магна
+## Дельвиг
 #### Первый запуск
 
 0. npm -i - Установка node_modules

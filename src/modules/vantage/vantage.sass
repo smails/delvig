@@ -1,6 +1,13 @@
 .vnt
   position: relative
   padding-top: 12rem
+  +screen('max', 1200)
+    display: none
+    padding: 5rem 0
+  &_mobile
+    display: block
+    +screen('min', 1201)
+      display: none
   &:before
     content: ''
     width: 100%
@@ -10,8 +17,23 @@
     left: 0
     z-index: -2
     background: #E9E4DC
+    +screen('max', 1200)
+      height: 100%
+  &__inner
+    +screen('max', 1200)
+      padding: 0
   &__title
     margin-bottom: 6rem
+    +screen('max', 1200)
+      margin-bottom: 2.5rem
+      padding-left: 4rem
+    +screen('max', 575)
+      padding-left: 1rem
+  &__slider
+    +screen('max', 1200)
+      padding-left: 4rem
+    +screen('max', 575)
+      padding-left: 1rem
   &__list
     display: flex
     justify-content: space-between
@@ -37,6 +59,8 @@
     position: relative
     box-sizing: border-box
     color: #fff
+    +screen('max', 1200)
+      max-width: 210px
     &:before
       content: ''
       position: absolute
@@ -50,11 +74,15 @@
       opacity: 0
       z-index: -1
       transition: .5s ease
+      +screen('max', 1200)
+        opacity: 1
     &:hover
       &:before
         opacity: 1
     &:nth-of-type(2)
       margin-top: 1rem
+      +screen('max', 1200)
+        margin-top: 0
   &__pic
     width: 100%
     vertical-align: middle
@@ -84,3 +112,5 @@
     padding-top: 1.5rem
     border-top: 1px solid rgba(#fff, .5)
     display: none
+    +screen('max', 1200)
+      display: block

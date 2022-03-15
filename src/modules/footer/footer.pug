@@ -61,27 +61,17 @@ mixin footer(state)
           +e.IMG.pic#map-footer(src='/images/stub-map-2.jpg' alt='')
     +b.text-bottom Девелопер - «Столица Нижний». Застройщик - ООО СЗ "Регионинвест" Проектная декларация на сайте наш.дом.рф. Официальный сайт. Не является публичной офертой. Представленные материалы и оборудование демонстрируется в целях художественной визуализации, являются примером. Марка или производитель оборудования и материалов могут меняться без ухудшения свойств без какого-либо уведомления. Цветовые решения фасадов, и иные проектные решения могут быть изменен
   if state == 'sale'
-    +b.footer-sale
-      +e.inner.inner
-        +e.action
-          +e.P.title Подпишись на e-maill рассылку
-          +e.P.subtitle Вы будете узнавать об акциях первыми
-          +e.FORM.form
-            +e.row
-              +e.group
-                +b.group
-                  +e.SPAN.name Имя
-                  +e.INPUT.field.required(type="text")
-              +e.group
-                +b.group
-                  +e.SPAN.name E-mail
-                  +e.INPUT.field.required(type="text")
-            +e.BUTTON.submit.btn_brown Подписаться
-            +e.sign Нажимая «Подписаться» Вы соглашаетесь с условиями 
-              a(href="#")  обработки персональных данных
-        +e.P.text Ввод в эксплуатацию  /
-          span 2025
-      +e.IMG.pic(src='/images/footer-sale.png' alt='')
+    +callback('v2')
+  if state == 'about'
+    +callback('v4')
+  if state == 'news'
+    +callback('v3')
+  if state == 'news-page'
+    +callback('v4')
+    +news('similar')
+  if state == 'sale-page'
+    +callback('v4')
+    +sale('similar')
   +b.FOOTER.footer
     +e.inner.inner
       +e.P.copy © «Столица Нижний», 2022. Все права защищены

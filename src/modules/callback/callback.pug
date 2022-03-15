@@ -19,3 +19,71 @@ mixin callback(vesion)
               +e.BUTTON.submit Подписаться
               +e.sign Нажимая «Подписаться» Вы соглашаетесь с условиями 
                 a(href="#")  обработки персональных данных
+  if vesion == 'v2'
+    +b.callback_orange
+      +e.inner.inner
+        +e.action
+          +e.P.title Подпишись на e-maill рассылку
+          +e.P.subtitle Вы будете узнавать об акциях первыми
+          +e.FORM.form
+            +e.row
+              +e.group
+                +b.group
+                  +e.SPAN.name Имя
+                  +e.INPUT.field.required(type="text")
+              +e.group
+                +b.group
+                  +e.SPAN.name E-mail
+                  +e.INPUT.field.required(type="text")
+            +e.BUTTON.submit.btn_brown Подписаться
+            +e.sign Нажимая «Подписаться» Вы соглашаетесь с условиями 
+              a(href="#")  обработки персональных данных
+        +e.P.text Ввод в эксплуатацию  /
+          span 2025
+      +e.IMG.pic(src='/images/footer-1.png' alt='')
+  if vesion == 'v3'
+    +b.callback_gray
+      +e.inner.inner
+        +e.action
+          +e.P.title Подпишись на e-maill рассылку
+          +e.P.subtitle Вы будете узнавать об акциях первыми
+          +e.FORM.form
+            +e.row
+              +e.group
+                +b.group
+                  +e.SPAN.name Имя
+                  +e.INPUT.field.required(type="text")
+              +e.group
+                +b.group
+                  +e.SPAN.name E-mail
+                  +e.INPUT.field.required(type="text")
+            +e.BUTTON.submit.btn_brown Подписаться
+            +e.sign Нажимая «Подписаться» Вы соглашаетесь с условиями 
+              a(href="#")  обработки персональных данных
+        +e.P.text Ввод в эксплуатацию  /
+          span 2025
+      +e.IMG.pic(src='/images/footer-1.png' alt='')
+  if vesion == 'v4'
+    +b.callback-blue
+      +e.inner.inner
+        +e.P.text Ввод в эксплуатацию  /
+          span 2025
+        +e.action
+          +e.P.subtitle Мы поможем выбрать
+          +e.P.title Ваш будущий, уютный дом
+          +e.FORM.form
+            +e.row
+              +e.group
+                +b.group
+                  +e.SPAN.name Имя
+                  +e.INPUT.field.required(type="text")
+              +e.group
+                +b.group
+                  +e.SPAN.name + 7 (___)  ___ -__-__
+                  +e.INPUT.field.required(type="tel")
+            +e.BUTTON.submit.btn_brown Оставить заявку
+            +e.sign Нажимая «Подписаться» Вы соглашаетесь с условиями 
+              a(href="#")  обработки персональных данных
+        +e.IMG.i(src="/images/footer-about-2.svg")
+      +e.IMG.pic(src='/images/footer-1.png' alt='')
+      +e.IMG.bottom(src='/images/footer-about-1.svg' alt='')

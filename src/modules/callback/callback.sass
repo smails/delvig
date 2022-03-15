@@ -10,6 +10,9 @@
     border-radius: 6px
     overflow: hidden
     position: relative
+    +screen('max', 575)
+      display: block
+      padding: 3rem 2rem
     &:before
       content: ''
       width: 750px
@@ -22,16 +25,34 @@
       opacity: 0.7
       backdrop-filter: blur(29px)
       position: absolute
+      +screen('max', 1200)
+        width: 700px
+        height: 700px
+      +screen('max', 1023)
+        width: 500px
+        height: 500px
+      +screen('max', 575)
+        height: 240px
+        right: -75px
+        top: 73%
   &__title
     font-weight: 600
     +fs(34px)
     color: #fff
     line-height: 1
     margin-bottom: 1.2rem
+    +screen('max', 1200)
+      +fs(18px)
+    +screen('max', 575)
+      +fs(24px)
   &__subtitle
     +fs(16px)
     color: #fff
     opacity: 0.6
+    +screen('max', 1200)
+      +fs(12px)
+    +screen('max', 575)
+      +fs(16px)
   &__form
     max-width: 600px
     display: flex
@@ -41,16 +62,37 @@
     padding-right: 16rem
     box-sizing: border-box
     width: 100%
+    +screen('max', 1023)
+      max-width: 400px
+    +screen('max', 575)
+      padding-right: 0
+      display: block
+      margin-top: 5rem
   &__group
     max-width: 185px
     width: 48%
     margin-top: 1rem
+    +screen('max', 1200)
+      margin-top: 0
+    +screen('max', 575)
+      width: 100%
+      margin-top: 2rem
+      max-width: 100%
   &__control
     flex-grow: 1
     margin-top: 2rem
+    +screen('max', 575)
+      display: flex
   &__sign
     +fs(10px)
     color: #CDA8A6
+    +screen('max', 1023)
+      position: absolute
+      right: 50px
+      bottom: -50px
+    +screen('max', 575)
+      position: inherit
+      margin-left: 2rem
     a
       text-decoration: underline
       color: inherit
@@ -65,3 +107,231 @@
     font-weight: 500
     line-height: 1
     color: #834643
+    +screen('max', 575)
+      position: relative
+
+.callback
+  position: relative
+  padding: 10rem 0 25rem
+  overflow: hidden
+  &_orange
+    background: linear-gradient(108.18deg, #CE9C69 -2.75%, #DED4CA 128.14%)
+    &:before
+      background: #5F1700
+      opacity: 0.15
+  &_gray
+    background-color: #8694A8
+    background-image: linear-gradient(108.18deg, rgba(134, 148, 168, 0.1) -14.44%, rgba(222, 212, 202, 0.1) 116.45%)
+    &:before
+      background:  #506482
+      opacity: 0.3
+  &:before
+    content: ''
+    width: 70vw
+    height: 70vw
+    border-radius: 100%
+    bottom: -40vw
+    right: -7.5%
+    display: block
+    position: absolute
+  &__inner
+    position: relative
+  &__action
+    max-width: 560px
+    width: 100%
+    color: #fff
+    padding-left: 4rem
+    box-sizing: border-box
+    position: relative
+    &::before
+      content: ''
+      width: 2px
+      height: calc(100% - 40px)
+      left: 0
+      top: 10px
+      background: #fff
+      position: absolute
+      display: block
+  &__title
+    +fs(76px)
+    font-weight: 700
+    letter-spacing: -0.045em
+    text-transform: uppercase
+    line-height: 1.1
+    margin-bottom: 3rem
+  &__subtitle
+    +fs(20px)
+    font-weight: 500
+    margin-bottom: 6rem
+  &__row
+    display: flex
+    justify-content: space-between
+    max-width: 460px
+  &__group
+    max-width: 210px
+    width: 48%
+  &__sign
+    +fs(10px)
+    margin-top: 2rem
+    a
+      text-decoration: underline
+      color: inherit
+  &__submit
+    margin-top: 3rem
+  &__text
+    +fs(16px)
+    color: #fff
+    position: absolute
+    right: 0
+    top: -75px
+    transform: rotate(-90deg)
+    transform-origin: right
+    span
+      +fs(34px)
+      font-style: italic
+      font-weight: 600
+      display: inline-block
+      margin-left: 0.5rem
+      font-family: $ff2
+  &__pic
+    position: absolute
+    right: 0
+    bottom: 0
+
+.callback-blue
+  position: relative
+  padding: 3rem 0 41rem
+  background-image: url(../images/footer-bg-1.jpg)
+  background-repeat: repeat-y
+  background-size: cover
+  overflow: hidden
+  +screen('max', 1200)
+    padding-bottom: 35rem
+  +screen('max', 1023)
+    padding-bottom: 15rem
+  +screen('max', 575)
+    padding-bottom: 30rem
+  &:before
+    content: ''
+    width: 85vw
+    height: 85vw
+    border-radius: 100%
+    background: #fff
+    opacity: 0.15
+    bottom: -35vw
+    right: -25%
+    display: block
+    position: absolute
+    opacity: 0.1
+  &__inner
+    position: relative
+  &__action
+    max-width: 630px
+    width: 100%
+    color: #fff
+    padding-left: 4rem
+    box-sizing: border-box
+    position: relative
+    +screen('max', 575)
+      padding-left: 2.5rem
+      margin-top: 3rem
+    &::before
+      content: ''
+      width: 2px
+      height: calc(100% - 35px)
+      left: 0
+      top: 5px
+      background: #fff
+      position: absolute
+      display: block
+  &__title
+    +fs(76px)
+    font-weight: 700
+    letter-spacing: -0.045em
+    text-transform: uppercase
+    line-height: 1.1
+    margin-bottom: 3rem
+    +screen('max', 1200)
+      +fs(68px)
+    +screen('max', 575)
+      +fs(38px)
+      margin-bottom: 2rem
+  &__subtitle
+    +fs(12px)
+    margin-bottom: 2rem
+    text-transform: uppercase
+  &__row
+    display: flex
+    justify-content: space-between
+    max-width: 460px
+    +screen('max', 1023)
+      display: block
+    +screen('max', 575)
+      width: 100%
+  &__group
+    max-width: 210px
+    width: 48%
+    +screen('max', 1023)
+      margin-bottom: 2rem
+    +screen('max', 575)
+      max-width: 100%
+      width: 100%
+  &__sign
+    +fs(10px)
+    margin-top: 2rem
+    +screen('max', 1023)
+      max-width: 50%
+    +screen('max', 575)
+      max-width: 100% 
+    a
+      text-decoration: underline
+      color: inherit
+  &__submit
+    margin-top: 3rem
+    +screen('max', 575)
+      margin-top: 0
+  &__text
+    +fs(14px)
+    text-align: right
+    color: #fff
+    +screen('max', 575)
+      text-align: left
+    span
+      +fs(36px)
+      font-style: italic
+      font-weight: 600
+      display: inline-block
+      margin-left: 0.5rem
+      font-family: $ff2
+  &__i
+    position: absolute
+    top: 10rem
+    right: 0
+    +screen('max', 1200)
+      right: 3rem
+    +screen('max', 575)
+      display: none
+  &__pic
+    position: absolute
+    right: 4.5%
+    bottom: 0
+    +screen('max', 1500)
+      width: 90%
+      right: -10%
+    +screen('max', 1200)
+      right: -15%
+    +screen('max', 1023)
+      right: -10%
+    +screen('max', 575)
+      width: 135%
+      right: -25%
+  &__bottom
+    position: absolute
+    right: 0
+    bottom: -10%
+    width: 100%
+    opacity: 0.6
+    +screen('max', 1200)
+      bottom: -5%
+    +screen('max', 575)
+      bottom: -2%

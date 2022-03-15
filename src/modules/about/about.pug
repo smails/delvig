@@ -1,0 +1,116 @@
+mixin about(vars)
+  +b.banner-about.section
+    +e.inner.inner
+      +b.A.back(href="#") < Назад
+      +e.P.sign Что мы расскажем
+      +e.head
+        +e.H1.title О Андрее Ивановиче 
+          span Дельвиге
+        +e.year (1813-1877)
+      +e.body
+        +e.text
+          p
+            b Инженер, архитектор, градостроитель
+            | — происходил из знаменитого рода обрусевших немцев. Его двоюродный брат, поэт и издатель Антон Антонович Дельвиг — друг А.С. Пушкина по Царскосельскому лицею. 
+          p Андрей Дельвиг — один из выдающихся деятелей в истории России, благодаря которому во многих городах нашей 
+            b страны строились водопроводы, шоссе, железные дороги, мосты и каналы. 
+            | При личном участии Дельвига в XIX веке был разработан градостроительный план Нижнего Новгорода, построены нижегородский водопровод, Московское шоссе, а также железная дорога Нижний Новгород — Москва.
+          p Его инженерные разработки по праву считались образцом научного и хозяйственного подхода к строительству, а сам Андрей Дельвиг с его немецкой пунктуальностью, честностью и благородством
+            b заслужил репутацию подвижника, благотворителя и просветителя. 
+          p Благодаря ему в Нижнем Новгороде появилась площадь Сенная, вблизи которой появится новый 
+            b жилой комплекс, который «Столица Нижний» назвала в честь Андрея Дельвига.
+        +e.FIGURE.picture
+          +e.IMG.pic(src='/images/about-1.png' alt='')
+          +e.FIGCAPTION.caption
+            b Портрет военного инженера А.И.Дельвига кисти Репина И.Е. 
+            | Собрание: Государственная Третьяковская галерея 
+            a(href="#")  www.tretyakovgallery.ru
+  +b.info-about
+    +e.inner.inner
+      +e.content
+        +e.P.sign наше Решение
+        +e.H2.title Почему выбрали название «Дельвиг»
+        +e.P.text Многоквартирный дом со встроенными помещениями общественного назначения и 
+          b подземной автостоянкой. 
+          |Здание представляет собой Г-образный дом с аркой. В стилистике использованы приемы модернизированного 
+          b «ар-деко». 
+          | Такое решение придает зданию торжественность.
+      +e.slider.swiper-container
+        .swiper-wrapper
+          +e.slide_color-1.swiper-slide
+            +e.P.numb 01
+            +e.P.caption Репутация
+            +e.txt Выдающийся русский инженер,  ученый, государственный деятель, сенатор. 
+          +e.slide_color-2.swiper-slide
+            +e.P.numb 02
+            +e.P.caption ИМИДЖ
+            +e.txt Прекрасные строения, здания и надежность принятых решений
+          +e.slide_color-3.swiper-slide
+            +e.P.numb 03
+            +e.P.caption ИМИДЖ
+            +e.txt Прекрасные строения, здания и надежность принятых решений
+        +e.btn_next
+          svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+            path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke-linecap='round' stroke-linejoin='round')
+  +b.row-about
+    +e.inner.inner
+      +e.head
+        +e.wrap
+          +e.P.bumb 01
+          +e.P.title Где жил А.И.Дельвиг
+        +e.pagination
+          +e.btn_prev._1.disabled
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+          +e.btn_next._1
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+      +e.sl-1.swiper-container
+        .swiper-wrapper
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/about-2.jpg' alt='')
+            +e.caption Дом Дельвига в 
+              b Нижнем Новгороде
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/about-3.jpg' alt='')
+            +e.caption Дом Дельвига в 
+              b Нижнем Новгороде
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/about-4.jpg' alt='')
+            +e.caption Дом Дельвига в 
+              b Нижнем Новгороде
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/about-4.jpg' alt='')
+            +e.caption Дом Дельвига в 
+              b Нижнем Новгороде
+  +b.row-about
+    +e.inner.inner
+      +e.head
+        +e.wrap
+          +e.P.bumb 02
+          +e.P.title городские постройки А.И. Дельвига
+        +e.pagination
+          +e.btn_prev._2.disabled
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='M4 8 1 4.5 4 1M2 4.5h9' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+          +e.btn_next._2
+            svg(fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9')
+              path(d='m8 8 3-3.5L8 1M10 4.5H1' stroke='#fff' stroke-linecap='round' stroke-linejoin='round')
+      +e.sl-2.swiper-container
+        .swiper-wrapper
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/about-5.jpg' alt='')
+            +e.caption
+              b г. Нижний Новгород. Дом правительства (1840-1845)
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/about-6.jpg' alt='')
+            +e.caption
+              b г. Нижний Новгород. Дом правительства (1840-1845)
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/about-7.jpg' alt='')
+            +e.caption
+              b г. Нижний Новгород. Деперта
+          +e.slide.swiper-slide
+            +e.IMG.pic(src='/images/about-7.jpg' alt='')
+            +e.caption
+              b г. Нижний Новгород. Деперта

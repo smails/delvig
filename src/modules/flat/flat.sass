@@ -1,8 +1,12 @@
 .flat
   margin-top: 7rem
+  +screen('max', 1200)
+    margin-top: 3rem
   &__inner
     padding-bottom: 6rem
     border-bottom: 1px solid rgba(#003062, .3)
+    +screen('max', 575)
+      padding-bottom: 2rem
   &__head
     display: flex
     align-items: flex-start
@@ -19,6 +23,8 @@
     color: rgba(35, 38, 43, 0.49)
     line-height: 1.3
     margin-bottom: 5rem
+    +screen('max', 575)
+      margin-bottom: 2rem
   &__numb
     border-left: 1px solid #23262B
     padding-left: 3rem
@@ -41,14 +47,25 @@
     +fs(30px)
     line-height: 1.4
     opacity: .8
+    +screen('max', 1023)
+      +fs(26px)
+    +screen('max', 575)
+      +fs(14px)
   &__wrap
     margin-top: 7rem
     display: flex
     justify-content: space-between
+    +screen('max', 575)
+      display: block
   &__col
     position: relative
     max-width: 580px
     width: calc(50% - 20px)
+    +screen('max', 1023)
+      width: calc(50% - 5px)
+    +screen('max', 575)
+      width: 100%
+      margin-bottom: 3rem
   &__top
     position: absolute
     z-index: 2
@@ -95,6 +112,9 @@
     color: #fff
     border-radius: 3px
     width: calc(100% - 160px)
+    +screen('max', 1023)
+      width: calc(100% - 70px)
+      padding: 3rem
     &:before
       content: ''
       width: 1px
@@ -105,15 +125,22 @@
       display: block
       position: absolute
       border-radius: 3px
+      +screen('max', 1023)
+        height: 60px
+        left: 1.5rem
   &__caption
     +fs(26px)
     font-weight: 500
     line-height: 1
     margin-bottom: 1rem
+    +screen('max', 1200)
+      +fs(20px)
   &__text
     color: rgba(#fff, .8)
     +fs(14px)
     line-height: 1.4
+    +screen('max', 1200)
+      +fs(10px)
   &__pagination
     display: flex
     justify-content: space-between
@@ -123,6 +150,8 @@
     bottom: 3rem
     right: 3rem
     z-index: 9
+    +screen('max', 1023)
+      max-width: 100px
   &__btn
     width: 53px
     height: 53px
@@ -135,6 +164,9 @@
     transition: .5s linear
     flex-shrink: 0
     cursor: pointer
+    +screen('max', 1023)
+      width: 32px
+      height: 32px
     svg
       width: 12px
     path

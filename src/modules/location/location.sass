@@ -1,10 +1,20 @@
 .location
   margin-top: 9.5rem
+  &__inner
+    +screen('max', 1200)
+      padding: 0
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 6rem
+    +screen('max', 1200)
+      display: block
+      padding: 0 3rem
+    +screen('max', 1023)
+      margin-bottom: 1.5rem
+    +screen('max', 575)
+      padding: 0 1rem
   &__sign
     +fs(18px)
     color: rgba($c1, .8)
@@ -13,15 +23,29 @@
     padding-left: 2rem
     box-sizing: border-box
     max-width: 550px
+    +screen('max', 1200)
+      margin-top: 2rem
+      max-width: 100%
+      padding-left: 0
   &__nav
     display: flex
     border-bottom: 1px solid rgba(#003062, .15)
+    +screen('max', 1200)
+      padding: 0 2rem
+      box-sizing: border-box
+    +screen('max', 1023)
+      display: grid
+      grid-template-columns: 1fr 1fr
+    +screen('max', 575)
+      padding: 0 1rem
   &__sl-cat
     display: flex
     align-items: center
     margin-right: 3%
     padding-bottom: 0.85rem
     position: relative
+    +screen('max', 1200)
+      margin-right: 1%
     &:hover
       color: #004083
       .location__icon
@@ -35,6 +59,8 @@
       bottom: 0
       left: 0
       transition: .5s ease
+      +screen('max', 1023)
+        content: none
     &.active
       color: #003062
       .location__icon
@@ -52,14 +78,24 @@
     background-position: center
     background-repeat: no-repeat
     transition: .5s ease
+    flex-shrink: 0
   &__text
     +fs(12px)
     font-weight: 500
     letter-spacing: -0.02em
     line-height: 1
     color: #003062
+    text-align: left
   &__map
     margin-top: 1.2rem
+    width: 100%
+    height: 500px
+    +screen('max', 575)
+      height: 350px
+    #map
+      width: 100%
+      height: 100%
+      object-fit: cover
   &__btn
     width: 45px
     height: 45px
@@ -93,8 +129,14 @@
   &__slider
     position: relative
     margin-top: 3rem
+    +screen('max', 1200)
+      margin-left: 3rem
+    +screen('max', 575)
+      margin-left: 1rem
   &__slide
     border-radius: 3px
+    +screen('max', 575)
+      max-width: 80%
     &:before
       content: ''
       width: 100%
@@ -137,6 +179,10 @@
   &__pic
     vertical-align: middle
     border-radius: 3px
+    width: 100%
+    +screen('max', 575)
+      height: 150px
+      object-fit: cover
   &__pagination
     position: absolute
     width: calc(100% + 160px)
@@ -144,4 +190,8 @@
     justify-content: space-between
     left: -80px
     top: 50%
+    z-index: 9
     transform: translateY(-50%)
+    +screen('max', 1200)
+      width: 100%
+      left: -2rem

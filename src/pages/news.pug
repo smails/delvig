@@ -1,0 +1,9 @@
+include ../static/pug/global
+<!DOCTYPE html>
+html
+  +head('Новости')
+  body.single
+    +header('page')
+    +news('list')
+    +footer('news')
+    include ../static/pug/_scripts

@@ -34,8 +34,8 @@ mixin sale(state)
             +e.A.link(href='#')
               +e.IMG.pic(src='/images/sale-5.png' alt='')
               +e.caption Выберите интересующую вас планировку
-  if state == 'page'
-    +b.sale-page.section
+  if state == 'list'
+    +b.sale-list.section
       +e.inner.inner
         +b.A.back(href="#") < Назад
         +e.H1.title Акции
@@ -71,3 +71,32 @@ mixin sale(state)
           +e.BUTTON.btn.btn_brown Показать еще (
             span 32
             |)
+  if state == 'page'
+    +b.sale-page
+      +e.banner
+        +e.IMG.pic(src='/images/sale-banner-1.jpg' alt='')
+        +e.head
+          .inner
+            +b.A.back(href="#") < Назад
+            +e.H1.title Ипотека 0% первый год + скидки до 10% Дельвиг
+      +e.content.inner
+        +e.P.date до 15 февраля 2022 г.
+        +e.P.text До 15.02.2022 вы можете приобрести квартиру в жилом комплексе Дельвиг по программе субсидирования ипотеки по ставке 0% годовых в течение первого года кредитования. Условия также распространяются на приобретение квартир со скидкой до 3,8 млн руб.
+        +e.A.more.btn_brown Выбрать квартиру
+        +e.info
+          +e.P.info-title Условия
+          +e.P.info-text Ставка 0% на 12 месяцев, далее 9,99% при сумме кредита до 6 млн ₽, 9,79% при сумме кредита от 6 млн ₽. Первоначальный взнос от 20%, срок кредита от 3 до 20 лет. Программа действует при покупке квартиры в Level Причальный в ГК Level Group при сумме кредита от 600 тысяч до 50 млн ₽ в Москве и МО и наличии личного страхования заемщика. Предложение застройщика действительно до 15.02.2022. 
+  if state == 'similar'
+    +b.sale-similar
+      +e.inner.inner
+        +e.P.title специально для вас
+        +e.list
+          +e.A.link_large(href='#')
+            +e.IMG.pic(src='/images/sale-1.png' alt='')
+            +e.caption Выберите интересующую вас планировку
+          +e.A.link_small(href='#')
+            +e.IMG.pic(src='/images/sale-2.png' alt='')
+            +e.caption Посмотреть квартиру
+          +e.A.link_small(href='#')
+            +e.IMG.pic(src='/images/sale-3.png' alt='')
+            +e.caption Высокие потолки

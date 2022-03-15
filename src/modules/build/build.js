@@ -20,6 +20,12 @@ const stepBuild = new Swiper('.step-build__slider', {
   speed: 400,
   slidesPerView: 3,
   spaceBetween: 20,
+  breakpoints: {
+    575: {
+      slidesPerView: 'auto',
+      spaceBetween: 5,
+    },
+  },
 });
 
 $('.step-build__btn_next').click(() =>{

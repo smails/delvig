@@ -6,10 +6,10 @@ mixin type(vars)
         +e.A.more.btn_blue Смотреть все планировки и цены
       +e.tabs
         +e.nav
-          +e.BUTTON.btn.active(data-mtitle="1-комнатные") 1-комнатные
-          +e.BUTTON.btn(data-mtitle="2-комнатные") 2-комнатные
-          +e.BUTTON.btn(data-mtitle="3-комнатные") 3-комнатные
-          +e.BUTTON.btn(data-mtitle="4-комнатные") 4-комнатные
+          +e.BUTTON.btn.active(data-mtitle="1к") 1-комнатные
+          +e.BUTTON.btn(data-mtitle="2к") 2-комнатные
+          +e.BUTTON.btn(data-mtitle="3к") 3-комнатные
+          +e.BUTTON.btn(data-mtitle="4к") 4-комнатные
           +e.BUTTON.btn(data-mtitle="Парковочное место") Парковочное место
         +e.wrap
           +e.item
@@ -57,6 +57,6 @@ mixin type(vars)
                       +e.IMG.i(src='/icon/icon-plane-4.svg' alt='')
                       +e.P.caption Высота потолков 2,7-3 метра
                   +e.control
-                    +e.A.more.btn_brown-transparent(href="#") Смотреть планировки этого типа
-                    +e.A.more.btn_brown.js-open-modal(href="#callback") Оставить заявку
+                    +e.A.more.btn_brown-transparent(href="#" data-title="Планировки этого типа") Смотреть планировки этого типа
+                    +e.A.call.btn_brown.js-open-modal(href="#callback") Оставить заявку
               +e.P.sign Все квартиры в ЖК Дельвиг свободной планировки и сдаются без отделки. Представленное разделение на комнаты и расстановка перегородок - носит условный характер и является одним из возможных способов зонирования пространства.

@@ -1,11 +1,18 @@
 .type
   padding: 10rem 0
   background: #EFF1F4
+  +screen('max', 1200)
+    padding: 6rem 0
+  +screen('max', 1023)
+    padding: 6rem 0 10rem
+    position: relative
   &__head
     display: flex
     justify-content: space-between
     align-items: flex-end
     margin-bottom: 6rem
+    +screen('max', 1200)
+      margin-bottom: 4rem
   &__nav
     display: flex
     border-bottom: 1px solid rgba(#003062, .15)
@@ -17,6 +24,10 @@
     display: inline-block
     transition: .5s ease
     +fs(16px)
+    +screen('max', 1023)
+      font-size: 0
+    +screen('max', 575)
+      margin-right: 2rem
     &:hover
       color: #003062
     &:after
@@ -28,6 +39,9 @@
       bottom: 0
       left: 0
       transition: .5s ease
+    &:before
+      content: attr(data-mtitle)
+      font-size: 16px
     &.active
       color: #003062
       &:after
@@ -35,6 +49,8 @@
   &__select-type
     margin: 3rem 0
     display: flex
+    +screen('max', 575)
+      flex-wrap: wrap
   &__sl-btn
     padding: 9px 12px
     color: #003062
@@ -45,6 +61,9 @@
     border-radius: 33.744px
     transition: .5s ease
     +fs(12px)
+    +screen('max', 575)
+      margin-right: 1rem
+      margin-bottom: 1rem
     span
       font-size: 14px
     &:hover
@@ -52,6 +71,14 @@
     &.active
       color: #fff
       background: #003062
+  &__more
+    +screen('max', 1023)
+      position: absolute
+      bottom: 3rem
+      left: 0
+      right: 0
+      margin: 0 auto
+      max-width: 320px
 
 .type-plane
   background: #FFFFFF
@@ -60,14 +87,31 @@
   padding: 2rem 6rem 3rem 4.5rem
   box-sizing: border-box
   width: 100%
+  +screen('max', 1023)
+    padding: 2rem 3rem 2rem 1rem
+  +screen('max', 575)
+    padding: 1rem
   &__wrap
     display: flex
     align-items: flex-start
+    +screen('max', 575)
+      display: block
   &__picture
     width: 30%
     max-width: 300px
     margin-left: 5rem
     margin-right: 10%
+    +screen('max', 1200)
+      flex-shrink: 0
+      margin-left: 0
+      margin-right: 5%
+    +screen('max', 1023)
+      width: 50%
+      margin-right: 2%
+    +screen('max', 575)
+      margin-right: 0
+      width: 100%
+      max-width: 100%
   &__pic
     width: 100%
   &__select-plane
@@ -117,6 +161,10 @@
     font-weight: 500
     line-height: 1
     margin: 1.5rem 0
+    +screen('max', 1023)
+      +fs(30px)
+    +screen('max', 575)
+      +fs(26px)
   &__square
     display: flex
     line-height: 1
@@ -135,6 +183,8 @@
     flex-wrap: wrap
     padding-bottom: 1.5rem
     border-bottom: 1px solid rgba(#003062, .2)
+    +screen('max', 575)
+      margin-top: 3rem
   &__item
     display: flex
     align-items: center
@@ -144,17 +194,32 @@
     font-weight: 500
     line-height: 1
     margin-left: 1rem
+    +screen('max', 1023)
+      +fs(14px)
   &__i
     vertical-align: middle
   &__control
     display: flex
     margin-top: 3.5rem
+    +screen('max', 575)
+      justify-content: flex-end
   &__more
     margin-right: 1.5rem
     display: inline-block
+    +screen('max', 575)
+      display: none
   &__sign
     margin-top: 2.5rem
     +fs(12px)
     line-height: 1.15
     font-weight: 500
     color: #838C95
+  &__more
+    +screen('max', 1023)
+      font-size: 0
+    &:before
+      content: attr(data-title)
+      font-size: 14px
+  &__call
+    +screen('max', 1023)
+      font-size: 14px

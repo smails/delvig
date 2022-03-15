@@ -2,7 +2,12 @@ const news = new Swiper('.news__slider', {
   speed: 400,
   slidesPerView: 'auto',
   spaceBetween: 20,
-  loop: true
+  loop: true,
+  breakpoints: {
+    575: {
+      spaceBetween: 0,
+    },
+  },
 });
 
 $('.news__btn_next').click(() =>{

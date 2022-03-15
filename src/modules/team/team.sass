@@ -1,39 +1,88 @@
 .team
   margin-top: 10rem
+  +screen('max', 1200)
+    margin-top: 6rem
   &__inner
     display: flex
     justify-content: space-between
     align-items: flex-start
     padding-bottom: 6rem
     border-bottom: 1px solid rgba(#003062, .2)
+    +screen('max', 575)
+      display: block
+    +screen('max', 575)
+      padding-bottom: 0
+      border-bottom: 0
   &__left
     margin-right: 3rem
     max-width: 355px
+    +screen('max', 1200)
+      max-width: 49%
+    +screen('max', 575)
+      max-width: 100%
   &__middle
     margin-right: 2rem
     max-width: 320px
+    +screen('max', 1200)
+      display: none
   &__right
     max-width: 430px
+    +screen('max', 1200)
+      width: 50%
+      max-width: 49%
+    +screen('max', 575)
+      width: 100%
+      max-width: 100%
+      display: flex
+      flex-flow: column-reverse
   &__title
     font-weight: 500
     +fs(42px)
     line-height: 1
     color: #003062
     margin-bottom: 3rem
+    +screen('max', 1023)
+      +fs(34px)
   &__logo
     margin-top: 6rem
     max-width: 100%
+    +screen('max', 1200)
+      display: none
+    +screen('max', 575)
+      margin-top: 1rem
+      margin-bottom: 1rem
+    &_mobile
+      display: block
+      width: 100%
+      +screen('min', 1201)
+        display: none
   &__text
     color: #464646
     line-height: 1.4
     p
       margin-bottom: 1rem
+    &_mobile
+      margin-top: 5rem
+      +screen('max', 575)
+        margin-top: 3rem
+      +screen('min', 1201)
+        display: none
 
 .counter
   padding: 6rem 0
+  +screen('max', 575)
+    padding: 3rem 0 6rem
   &__inner
     display: flex
     justify-content: space-between
+    +screen('max', 575)
+      flex-wrap: wrap
+  &__item
+    +screen('max', 575)
+      width: 33%
+    &:last-of-type, &:nth-last-child(2)
+      +screen('max', 575)
+        width: 50%
   &__numb
     +fs(70px)
     font-weight: 500
@@ -44,6 +93,8 @@
     font-style: italic
     margin-bottom: 1rem
     color: #23262B
+    +screen('max', 1023)
+      +fs(50px)
   &__text
     +fs(17px)
     opacity: 0.6

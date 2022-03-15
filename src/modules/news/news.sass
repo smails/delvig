@@ -2,6 +2,10 @@
   padding: 10rem 0 7rem
   position: relative
   overflow: hidden
+  +screen('max', 1023)
+    padding: 6rem 0
+  +screen('max', 575)
+    padding-bottom: 0
   &__head
     display: flex
     justify-content: space-between
@@ -16,14 +20,20 @@
     line-height: 1
     text-decoration-line: underline
     color: #003062
+    +screen('max', 1200)
+      margin-right: 0
   &__pagination
     display: flex
     justify-content: space-between
     align-items: center
     max-width: 250px
+    +screen('max', 1200)
+      display: none
   &__slider
     overflow: inherit
     margin-top: 4rem
+    +screen('max', 575)
+      margin-top: 2rem
   &__btn
     width: 53px
     height: 53px
@@ -61,6 +71,8 @@
     transition: .5s ease
     background: #fff
     border-radius: 3px
+    +screen('max', 575)
+      width: 90%
     &:hover
       box-shadow: 0px -3px 19px rgba(0, 24, 107, 0.09), 0px 19px 46px rgba(7, 0, 22, 0.07)
   &__pic
@@ -106,3 +118,286 @@
       background-repeat: no-repeat
       background-size: contain
       margin-right: 0.5rem
+
+.news-list
+  &__title
+    margin-bottom: 3rem
+    +fs(42px)
+    line-height: 1
+    font-weight: 600
+  &__elems
+    flex-wrap: wrap
+    display: flex
+  &__control
+    margin-top: 4.5rem
+    padding-top: 4.5rem
+    border-top: 1px solid #4D545A
+    text-align: center
+  &__link
+    max-width: 395px
+    box-sizing: border-box
+    padding: 1rem
+    transition: .5s ease
+    background: #fff
+    border-radius: 3px
+    width: 33%
+    margin-bottom: 4rem
+    &:hover
+      box-shadow: 0px -3px 19px rgba(0, 24, 107, 0.09), 0px 19px 46px rgba(7, 0, 22, 0.07)
+      z-index: 3
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 3px
+    height: 283px
+    object-fit: cover
+  &__content
+    margin-top: 1.5rem
+    display: block
+  &__date
+    +fs(18px)
+    font-family: $ff2
+    line-height: 1
+    color: rgba(#23262B, .6)
+    font-style: italic
+  &__caption
+    +fs(20px)
+    font-weight: 600
+    line-height: 1.2
+    margin: 1rem 0 1.5rem
+  &__text
+    line-height: 1.4
+    width: 100%
+    opacity: 0.8
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    overflow: hidden
+  &__view
+    margin-top: 1.5rem
+    +fs(12px)
+    line-height: 1
+    color: rgba(#23262B, .8)
+    &:before
+      content: ''
+      width: 19px
+      height: 19px
+      display: inline-block
+      vertical-align: middle
+      background-image: url(../icon/icon-view.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      margin-right: 0.5rem
+
+.news-similar
+  padding: 10rem 0
+  &__title
+    margin-bottom: 3rem
+    +fs(24px)
+    line-height: 1
+    text-transform: uppercase
+  &__elems
+    display: flex
+  &__link
+    max-width: 395px
+    box-sizing: border-box
+    transition: .5s ease
+    background: #fff
+    border-radius: 3px
+    width: 33%
+    position: relative
+    margin-right: 2rem
+    &:last-of-type
+      margin-right: 0
+    &:before
+      content: ''
+      width: calc(100% + 2rem)
+      height: calc(100% + 2rem)
+      background: #fff
+      left: -1rem
+      top: -1rem
+      position: absolute
+      z-index: -1
+      display: block
+      box-shadow: 0px -3px 19px rgba(0, 24, 107, 0.09), 0px 19px 46px rgba(7, 0, 22, 0.07)
+      opacity: 0
+      transition: .5s ease
+    &:hover
+      z-index: 3
+      &:before
+        opacity: 1
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 3px
+    height: 283px
+    object-fit: cover
+  &__content
+    margin-top: 1.5rem
+    display: block
+  &__date
+    +fs(18px)
+    font-family: $ff2
+    line-height: 1
+    color: rgba(#23262B, .6)
+    font-style: italic
+  &__caption
+    +fs(20px)
+    font-weight: 600
+    line-height: 1.2
+    margin: 1rem 0 1.5rem
+  &__text
+    line-height: 1.4
+    width: 100%
+    opacity: 0.8
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    overflow: hidden
+  &__view
+    margin-top: 1.5rem
+    +fs(12px)
+    line-height: 1
+    color: rgba(#23262B, .8)
+    &:before
+      content: ''
+      width: 19px
+      height: 19px
+      display: inline-block
+      vertical-align: middle
+      background-image: url(../icon/icon-view.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      margin-right: 0.5rem
+
+.news-page
+  &__title
+    +fs(42px)
+    font-weight: 600
+    line-height: 1.15
+    max-width: 860px
+    width: 100%
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__date
+    font-style: italic
+    font-family: $ff2
+    line-height: 1
+    max-width: 155px
+    padding-top: 1rem
+    p
+      +fs(22px)
+      opacity: 0.6
+    span
+      +fs(32px)
+  &__text
+    color: #4D545A
+    margin: 4rem 0
+    line-height: 1.5
+    width: 100%
+    max-width: 815px
+    b
+      font-weight: 500
+      color: #23262B
+    p
+      margin-bottom: 1.5rem
+    ol
+      list-style: decimal inside
+    ul
+      list-style: disc inside
+  &__pic
+    width: 100%
+    vertical-align: middle
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    .share
+      margin-right: 5rem
+      margin-top: 4rem
+  &__blockquote
+    position: relative
+    padding-top: 8rem
+    text-align: center
+    +fs(26px)
+    font-weight: 700
+    line-height: 1.3
+    letter-spacing: -0.02em
+    font-style: italic
+    width: 100%
+    max-width: 650px
+    margin-left: 5%
+    position: relative
+    &:before
+      content: '“'
+      font-style: italic
+      font-weight: 700
+      font-size: 164.893px
+      line-height: 1
+      text-align: center
+      letter-spacing: -0.02em
+      font-family: $ff2
+      position: absolute
+      left: 0
+      top: -10%
+      right: 0
+      margin: 0 auto
+  &__figure
+    display: flex
+    align-items: flex-start
+    margin: 4rem 0
+  &__fig-pic
+    width: 70%
+    max-width: 795px
+    margin-right: 5rem
+  &__figcaption
+    font-weight: 300
+    max-width: 250px
+  &__caption
+    +fs(18px)
+    margin-bottom: 2rem
+  &__gallery
+    display: flex
+  &__gallery-item
+    width: calc(33% - 3px)
+    margin-right: 1rem
+    &:last-of-type
+      margin-right: 0
+  &__gallery-pic
+    width: 100%
+    object-fit: cover
+    vertical-align: middle
+    border-radius: 6px
+  &__gallery-text
+    margin-top: 1.5rem
+    +fs(14px)
+    font-weight: 500
+  .video
+    width: 70%
+    max-width: 795px
+    margin-right: 5rem
+.share
+  &__title
+    font-weight: 600
+    +fs(12px)
+    text-transform: uppercase
+    letter-spacing: 0.115em
+    margin-bottom: 1rem
+  &__list
+    display: flex
+  &__link
+    width: 50px
+    height: 50px
+    background: #003062
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .5s ease
+    border-radius: 100%
+    margin-right: 2rem
+    &:hover
+      background: #B04E47
